@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <h1>Add New Game</h1>
+  <br>
+  <form action="/games" method="POST">
+    <input type="text" name="game[name]" placeholder="Game">
+    <input type="text" name="game[console]" placeholder="Console">
+    <input type="submit" value="Submit">
+  </form>
+<!-- see my games /back -->
+<form action="/library" method="GET">
+  <input type="submit" value="Back to games">
+</form>
+<footer class="branding">
+  <small>&copy; 2020 <strong>GameOrg</strong></small>
+</footer>
+</div>

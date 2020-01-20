@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <h1>Edit <%= @game.name %></h1>
+  <form method="post" action="/games/<%=@game.id%>">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+    Game Name
+    <input type="text" name="game[name]" value="<%= @game.name %>">
+    <br>
+    Console
+    <input type="text" name="game[console]" value="<%= @game.console %>">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <!-- back to games list  -->
+  <form action="/games/<%= @game.id %>" method="GET">
+    <input type="submit" value="Back">
+  </form>
+  <footer class="branding">
+    <small>&copy; 2020 <strong>GameOrg</strong></small>
+  </footer>
+    </div>

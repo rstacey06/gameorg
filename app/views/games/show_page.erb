@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <h1><%= @game.name %></h1>
+  <br />
+  <h2><%= @game.console %></h2>
+  <br>
+<!-- edit game -->
+<form action="/games/<%= @game.id %>/edit" method="put">
+  <input type="submit" value="Edit Game">
+</form>
+<!-- delete game -->
+<form action="/games/<%= @game.id %>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete">
+</form>
+<!-- see my games  -->
+<form action="/library" method="GET">
+  <input type="submit" value="Back to games">
+</form>
+<footer class="branding">
+  <small>&copy; 2020 <strong>GameOrg</strong></small>
+</footer>
+</div>

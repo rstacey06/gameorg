@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <p> Current Gamer, <%= current_user.username %></p>
+  <h1> Game Library </h1>
+  <% @games.each do |game| %>
+  <div>
+    <a href="/games/<%= game.id %>"><%= game.name %></a>
+  </div>
+  <% end %>
+  <br>
+  <br>
+<!-- add a game -->
+  <form method="get" action="games/new">
+    <input id="hidden" type="hidden" name="_method" value="Add Game">
+    <br>
+    <input type="submit" value="Add Game">
+  </form>
+  <!-- logout -->
+  <form action="/logout" method="GET">
+    <input type="submit" value="Logout">
+  </form>
+  <footer class="branding">
+    <small>&copy; 2020 <strong>GameOrg</strong></small>
+  </footer>
+</div>
